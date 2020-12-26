@@ -5,18 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StayListComponent } from './container/stay-list/stay-list.component';
 import { StayCardComponent } from './components/stay-card/stay-card.component';
+import { MaterialModule } from './common/material';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StayListComponent,
-    StayCardComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, StayListComponent, StayCardComponent],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
