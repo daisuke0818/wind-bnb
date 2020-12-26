@@ -5,9 +5,11 @@
       <!-- 写真 -->
       <img class="acc-photo" [src]="accDatum.photo" />
       <div fxLayout="row" fxLayoutGap="16px">
-        <mat-chip *ngIf="accDatum.superHost">superHost!</mat-chip>
+        <div class="box2" *ngIf="accDatum.superHost">superHost!</div>
         <div>{{ accDatum.type }}</div>
-        <div fxLayoutAlign="end"><mat-icon style="color: orange;">star</mat-icon>{{ accDatum.rating }}</div>
+        <div fxLayoutAlign="end">
+          <mat-icon style="color: orange">star</mat-icon>{{ accDatum.rating }}
+        </div>
       </div>
       <b>{{ accDatum.title }}</b>
     </div>
