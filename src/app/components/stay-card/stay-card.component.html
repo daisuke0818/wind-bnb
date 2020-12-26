@@ -1,5 +1,15 @@
-<p>stay-card works!</p>
-
-<ng-container *ngFor="let accDatum of accData">
-  <div>{{accDatum.title}}</div>
-</ng-container>
+<div fxLayout="row wrap" fxLayoutAlign="space-around" fxLayoutGap="16px">
+  <ng-container *ngFor="let accDatum of accData">
+    <!-- カードの表示 -->
+    <div class="acc-card">
+      <!-- 写真 -->
+      <img class="acc-photo" [src]="accDatum.photo" />
+      <div fxLayout="row" fxLayoutGap="16px">
+        <mat-chip *ngIf="accDatum.superHost">superHost!</mat-chip>
+        <div>{{ accDatum.type }}</div>
+        <div fxLayoutAlign="end"><mat-icon style="color: orange;">star</mat-icon>{{ accDatum.rating }}</div>
+      </div>
+      <b>{{ accDatum.title }}</b>
+    </div>
+  </ng-container>
+</div>
