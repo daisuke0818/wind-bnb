@@ -1,0 +1,23 @@
+.acc-card {
+  width: 25%;
+  margin-bottom: 16px;
+}
+
+.acc-photo {
+  object-fit: cover; // サイズ比をそろえる
+  border-radius: 30px; // 角の丸み
+  width: 100%;
+  height: 70%;
+}
+
+.box2 {
+  padding: 0.1em 0.1em;
+  font-weight: bold;
+  background: #fff;
+  border: solid 1px; /*線*/
+  border-radius: 10px; /*角の丸み*/
+}
+.box2 p {
+  margin: 0;
+  padding: 0;
+}
