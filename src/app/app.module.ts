@@ -8,10 +8,13 @@ import { StayCardComponent } from './components/stay-card/stay-card.component';
 import { MaterialModule } from './common/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
-  declarations: [AppComponent, StayListComponent, StayCardComponent, SearchBoxComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule, FlexLayoutModule],
+  declarations: [AppComponent, StayListComponent, StayCardComponent, SearchBoxComponent, SearchDialogComponent],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule, FlexLayoutModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,6 @@
+import { SearchDialogComponent } from './../../components/search-dialog/search-dialog.component';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-stay-list',
@@ -6,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stay-list.component.scss'],
 })
 export class StayListComponent implements OnInit {
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+
+  openSearchDialog() {
+    const dialogRef = this.dialog.open(SearchDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
