@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { StayListComponent } from './stay-list.component';
 
@@ -6,7 +6,7 @@ describe('StayListComponent', () => {
   let component: StayListComponent;
   let fixture: ComponentFixture<StayListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ StayListComponent ]
     })
