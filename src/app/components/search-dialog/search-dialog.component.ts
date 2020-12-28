@@ -1,5 +1,6 @@
 import { cities } from './../../stay-data/stay-city';
 import { Component, OnInit } from '@angular/core';
+import { BnbManageFacde } from 'src/app/store/bnb-manage.facade';
 
 @Component({
   selector: 'app-search-dialog',
@@ -10,12 +11,12 @@ export class SearchDialogComponent implements OnInit {
   // 宿泊都市
   cities = cities;
 
-  constructor() {}
+  constructor(private bnbManageFacade: BnbManageFacde) {}
 
   ngOnInit(): void {}
 
   // ここの情報を状態管理する
   applyStayCity(city: string) {
-    console.log(city);
+    this.bnbManageFacade.saveStayCity(city);
   }
 }
