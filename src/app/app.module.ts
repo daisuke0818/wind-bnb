@@ -10,12 +10,24 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
-
+import { AppStoreModule } from './app-store/app-store.module';
 
 @NgModule({
-  declarations: [AppComponent, StayListComponent, StayCardComponent, SearchBoxComponent, SearchDialogComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule, FlexLayoutModule, BrowserAnimationsModule, StoreModule.forRoot({}, {})],
+  declarations: [
+    AppComponent,
+    StayListComponent,
+    StayCardComponent,
+    SearchBoxComponent,
+    SearchDialogComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    AppStoreModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
