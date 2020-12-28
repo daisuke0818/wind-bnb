@@ -13,4 +13,9 @@ export class SearchDialogComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  // ここの情報を状態管理する
+  applyStayCity(city: string) {
+    console.log(city);
+  }
 }

@@ -4,7 +4,7 @@
   <ng-container *ngFor="let city of cities">
     <div fxLayout="row">
       <mat-icon>room</mat-icon>
-      <div>{{ city }}</div>
+      <div (click)='applyStayCity(city)'>{{ city }}</div>
     </div>
   </ng-container>
   <div>宿泊人数</div>
