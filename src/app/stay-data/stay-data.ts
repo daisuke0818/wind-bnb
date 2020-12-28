@@ -1,4 +1,5 @@
-export const data = [
+import { Accommodation } from './../interface/accommodation.interface';
+export const data: Accommodation[] = [
   {
     city: 'Helsinki',
     country: 'Finland',
