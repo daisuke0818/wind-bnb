@@ -10,7 +10,7 @@ export interface State {
 }
 
 export const initialState: State = {
-  city: '選択した都市',
+  city: '',
   adult: 1,
   child: 0,
 };

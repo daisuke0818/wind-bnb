@@ -11,6 +11,8 @@ import { MatDialog } from '@angular/material/dialog';
 export class StayListComponent implements OnInit {
   constructor(public dialog: MatDialog, private facade: BnbManageFacde) {}
   $selectedCity = this.facade.city$;
+  $adult = this.facade.adult$;
+  $child = this.facade.child$;
 
   city: string;
   guest: number;

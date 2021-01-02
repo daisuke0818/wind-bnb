@@ -12,10 +12,15 @@
     </svg>
 
     <div fxLayout="row" fxLayoutAlign="space-between">
-      <div class="page-title">Stay in {{ $selectedCity | async }}</div>
+      <div class="page-title">
+        Stay in {{ ($selectedCity | async) === '' ? 'Finland' : ($selectedCity | async) }}
+      </div>
       <div (click)="openSearchDialog()">検索</div>
     </div>
   </div>
-  <div>{{ $selectedCity | async }}</div>
-  <app-stay-card></app-stay-card>
+  <app-stay-card
+    [adult]="$adult | async"
+    [child]="$child | async"
+    [city]="$selectedCity | async"
+  ></app-stay-card>
 </div>
