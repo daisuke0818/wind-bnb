@@ -15,6 +15,6 @@ export class StayListComponent implements OnInit {
   ngOnInit(): void {}
 
   openSearchDialog() {
-    this.dialog.open(SearchDialogComponent);
+    this.dialog.open(SearchDialogComponent, { width: '500px' });
   }
 }

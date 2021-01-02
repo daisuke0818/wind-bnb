@@ -1,19 +1,39 @@
 <h2 mat-dialog-title>条件を絞り込む</h2>
 <mat-dialog-content class="mat-typography">
-  <div>宿泊先</div>
-  <ng-container *ngFor="let city of cities">
-    <div fxLayout="row">
-      <mat-icon>room</mat-icon>
-      <div (click)='applyStayCity(city)'>{{ city }}</div>
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <div>
+      <div>宿泊先</div>
+      <ng-container *ngFor="let city of cities">
+        <div fxLayout="row">
+          <mat-icon>room</mat-icon>
+          <div (click)="applyStayCity(city)">{{ city }}</div>
+        </div>
+      </ng-container>
     </div>
-  </ng-container>
-  <div>宿泊人数</div>
-  <div fxLayout="row">
-    <mat-icon>person</mat-icon>
-    <div>大人</div>
+    <div>
+      <div>宿泊人数</div>
+      <div fxLayout="column">
+        <div fxLayout="row">
+          <mat-icon>person</mat-icon>
+          <div>大人</div>
+          <mat-icon (click)="reduceAdult()">remove_circle_outline</mat-icon>
+          <div>{{ $adult | async }}</div>
+          <mat-icon (click)="addAdult()">add_circle_outline</mat-icon>
+        </div>
+        <div fxLayout="column">
+          <div fxLayout="row">
+            <mat-icon>person_outline</mat-icon>
+            <div>子供</div>
+            <mat-icon (click)="reduceChild()">remove_circle_outline</mat-icon>
+            <div>{{ $child | async }}</div>
+            <mat-icon (click)="addChild()">add_circle_outline</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+  <button mat-button mat-dialog-close>Confirm</button>
 </mat-dialog-actions>

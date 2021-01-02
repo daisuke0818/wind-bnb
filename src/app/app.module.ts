@@ -11,6 +11,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { SearchDialogComponent } from './components/search-dialog/search-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppStoreModule } from './app-store/app-store.module';
+import { BnbManageModule } from './store/bnb-manage.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AppStoreModule } from './app-store/app-store.module';
     FlexLayoutModule,
     BrowserAnimationsModule,
     AppStoreModule,
+    BnbManageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

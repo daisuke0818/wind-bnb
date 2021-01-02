@@ -1,11 +1,13 @@
 // manage-module
 
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { BnbManageStoreModule } from './bnb-manage-store.module';
+import { StoreModule } from '@ngrx/store';
+import { bnbManageFeatureKey, reducer } from './bnb-manage.reducer';
 
 @NgModule({
   declarations: [],
-  imports: [BnbManageStoreModule],
+  imports: [CommonModule, StoreModule.forRoot({ [bnbManageFeatureKey]: reducer })],
   exports: [],
 })
 export class BnbManageModule {}
