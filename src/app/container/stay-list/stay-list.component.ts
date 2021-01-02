@@ -10,10 +10,15 @@ import { MatDialog } from '@angular/material/dialog';
 export class StayListComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
 
+  city: string;
+  guest: number;
+
   ngOnInit(): void {}
 
   openSearchDialog() {
-    const dialogRef = this.dialog.open(SearchDialogComponent);
+    const dialogRef = this.dialog.open(SearchDialogComponent, {
+      data: { city: this.city, guest: this.guest },
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

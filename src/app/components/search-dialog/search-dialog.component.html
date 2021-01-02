@@ -4,7 +4,7 @@
   <ng-container *ngFor="let city of cities">
     <div fxLayout="row">
       <mat-icon>room</mat-icon>
-      <div (click)='applyStayCity(city)'>{{ city }}</div>
+      <div (click)="applyStayCity(city)">{{ city }}</div>
     </div>
   </ng-container>
   <div>宿泊人数</div>
@@ -15,5 +15,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+  <button mat-button [mat-dialog-close]="[]" cdkFocusInitial>Concirm</button>
 </mat-dialog-actions>
