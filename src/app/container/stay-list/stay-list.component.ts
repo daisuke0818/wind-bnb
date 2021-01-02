@@ -12,6 +12,9 @@ export class StayListComponent implements OnInit {
   constructor(public dialog: MatDialog, private facade: BnbManageFacde) {}
   $selectedCity = this.facade.city$;
 
+  city: string;
+  guest: number;
+
   ngOnInit(): void {}
 
   openSearchDialog() {
