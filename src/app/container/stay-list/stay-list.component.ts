@@ -1,3 +1,4 @@
+import { BnbManageFacde } from 'src/app/store/bnb-manage.facade';
 import { SearchDialogComponent } from './../../components/search-dialog/search-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,7 +9,8 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./stay-list.component.scss'],
 })
 export class StayListComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private facade: BnbManageFacde) {}
+  $selectedCity = this.facade.city$;
 
   city: string;
   guest: number;
@@ -16,12 +18,6 @@ export class StayListComponent implements OnInit {
   ngOnInit(): void {}
 
   openSearchDialog() {
-    const dialogRef = this.dialog.open(SearchDialogComponent, {
-      data: { city: this.city, guest: this.guest },
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(SearchDialogComponent, { width: '500px' });
   }
 }
