@@ -18,7 +18,7 @@ export class StayCardComponent implements OnChanges, OnInit {
   constructor() {}
 
   ngOnChanges(): void {
-    if (this.city !== '') {
+    if (this.city !== 'all cities') {
       // ここでInputで貰ったのをもとにデータの絞り込みをする
       this.accData = data
         .filter((rowData: Accommodation) => rowData.city === this.city)

@@ -10,7 +10,7 @@ export interface State {
 }
 
 export const initialState: State = {
-  city: '',
+  city: 'all cities',
   adult: 1,
   child: 0,
 };

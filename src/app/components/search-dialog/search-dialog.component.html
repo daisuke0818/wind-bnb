@@ -16,7 +16,9 @@
         <div fxLayout="row">
           <mat-icon>person</mat-icon>
           <div>大人</div>
-          <mat-icon (click)="reduceAdult()">remove_circle_outline</mat-icon>
+          <mat-icon *ngIf="($adult | async) > 0" (click)="reduceAdult()"
+            >remove_circle_outline</mat-icon
+          >
           <div>{{ $adult | async }}</div>
           <mat-icon (click)="addAdult()">add_circle_outline</mat-icon>
         </div>
@@ -24,7 +26,9 @@
           <div fxLayout="row">
             <mat-icon>person_outline</mat-icon>
             <div>子供</div>
-            <mat-icon (click)="reduceChild()">remove_circle_outline</mat-icon>
+            <mat-icon *ngIf="($child | async) > 0" (click)="reduceChild()"
+              >remove_circle_outline</mat-icon
+            >
             <div>{{ $child | async }}</div>
             <mat-icon (click)="addChild()">add_circle_outline</mat-icon>
           </div>
